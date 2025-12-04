@@ -1,0 +1,200 @@
+/* ===============================
+   MAIN CONTAINER
+=============================== */
+.status-container {
+  width: 100%;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.status-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ===============================
+   FILTER BUTTONS
+=============================== */
+.status-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: #eee;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #ddd;
+}
+
+.filter-btn.active {
+  background: #b71c1c;
+  color: white;
+}
+
+/* ===============================
+   STATUS CARDS
+=============================== */
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.status-card {
+  background: white;
+  padding: 15px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.status-card:hover {
+  transform: scale(1.01);
+}
+
+/* Color coding */
+.pending {
+  border-left: 6px solid #ff9800;
+}
+
+.accepted {
+  border-left: 6px solid #4caf50;
+}
+
+.status-row {
+  margin-bottom: 6px;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+/* ===============================
+   ACTION BUTTONS INSIDE CARD
+=============================== */
+.status-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cancel-btn,
+.accept-btn {
+  padding: 8px 14px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cancel-btn {
+  background: #e53935;
+}
+.cancel-btn:hover {
+  background: #c62828;
+}
+
+.accept-btn {
+  background: #4caf50;
+}
+.accept-btn:hover {
+  background: #2e7d32;
+}
+
+/* ===============================
+   TEXT FEEDBACK
+=============================== */
+.info-text {
+  color: #555;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+=============================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .status-title {
+    font-size: 24px;
+  }
+
+  .status-card {
+    padding: 12px 15px;
+  }
+
+  .status-row {
+    font-size: 14px;
+  }
+
+  .cancel-btn, .accept-btn {
+    width: 48%;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .status-container {
+    padding: 15px;
+  }
+
+  .status-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+
+  .status-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .status-row {
+    font-size: 14px;
+  }
+
+  .status-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cancel-btn,
+  .accept-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}

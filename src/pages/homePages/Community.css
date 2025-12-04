@@ -1,0 +1,78 @@
+/* PAGE BACKGROUND */
+.community-section {
+  padding: 120px 40px;
+  background: #d7eeff;
+  min-height: 100vh;
+padding-bottom: 80px;
+overflow-y: auto;
+}
+
+/* PAGE TITLE */
+.community-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 45px;
+  color: #222;
+}
+
+/* SUBTITLE */
+.community-subtitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* GRID — FIX FOR YOUR ISSUE */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* CARD */
+.community-card {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.community-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(255, 60, 60, 0.35);
+}
+
+/* CARD IMAGE */
+.community-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+/* CARD TEXT */
+.community-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.community-role {
+  font-size: 14px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .community-title {
+    font-size: 28px;
+  }
+}

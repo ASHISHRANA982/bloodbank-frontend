@@ -1,0 +1,421 @@
+/* ---------- GLOBAL LAYOUT ---------- */
+.content-offset {
+  /* keep your app offsets */
+}
+
+/* Page background */
+.requestblood-new {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #d7eeff;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ---------- OUTER WHITE FRAME ---------- */
+.rb-outer-frame {
+  width: 95%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: 0 8px 28px rgba(14, 20, 40, 0.06);
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+/* internal layout inside white frame */
+.rb-new-wrapper {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ---------- LEFT CARD ---------- */
+.rb-left-card {
+  width: 240px;
+  background: #c6363c;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.rb-left-content {
+  padding: 20px;
+  background: #c44545;
+}
+.rb-left-content h2 {
+  font-weight: 500;
+  font-size: larger;
+}
+
+.rb-left-name {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rb-left-role {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.rb-left-quote {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+  text-align: center;
+}
+
+.rb-left-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.rb-left-dots span {
+  width: 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+}
+
+/* IMAGE */
+.rb-left-img-wrap {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.rb-left-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.rb-right-card {
+  flex: 1;
+  padding: 18px;
+  border-radius: 6px;
+  background: transparent;
+  color: #111;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ---------- INNER FORM BOX ---------- */
+.rb-form-inner {
+  width: 500px;
+  max-width: 100%;
+  background: #ffffff;
+  color: #111;
+  border-radius: 5px;
+  padding: 0;
+  box-shadow: 0 12px 30px rgba(8, 10, 20, 0.08);
+  box-sizing: border-box;
+  max-height: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e2e2e2;
+}
+
+/* FIXED HEADER */
+.rb-form-header {
+  padding: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.98);
+  flex: 0 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rb-new-title {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  color: #d7263d;
+  font-weight: 600;
+}
+
+/* SCROLLABLE FORM BODY */
+.rb-form-scroll {
+  padding: 20px 22px 22px;
+  overflow-y: auto;
+  flex: 1;
+  height: 100%;
+  max-height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar */
+.rb-form-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.rb-form-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.rb-form-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rb-form-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(243, 7, 7, 0.904) transparent;
+}
+
+/* ---------- FIELDS ---------- */
+.rb-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.rb-field label {
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.rb-field input,
+.rb-field select,
+.rb-field textarea {
+  width: 100%;
+  padding: 8px 0;
+  border: none !important;
+  border-bottom: 2px solid #ccc !important;
+  background: transparent !important;
+  outline: none !important;
+  color: #000;
+  font-size: 15px;
+}
+
+.rb-field input:focus,
+.rb-field select:focus,
+.rb-field textarea:focus {
+  border-bottom-color: #d7263d !important;
+}
+
+.rb-field input::placeholder,
+.rb-field textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* TWO-COLUMN GRID */
+.rb-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* ERROR BOX */
+.rb-alert.error {
+  background: rgba(255, 50, 80, 0.06);
+  color: #dd0931;
+  border: 1px solid rgba(255, 50, 80, 0.12);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+/* SUBMIT BUTTON */
+.rb-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  overflow: visible !important;
+}
+
+.rb-submit {
+  cursor: pointer;
+  padding: 12px 30px;
+  border-radius: 26px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 160px;
+  transition: 0.12s ease;
+  box-shadow: 0 6px 18px rgba(255, 45, 120, 0.12);
+  overflow: visible !important;
+}
+
+.rb-submit-medium {
+  background: #db262c;
+  color: #fff;
+}
+
+.rb-submit-medium:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255, 30, 120, 0.18);
+}
+
+/* ---------- POPUP ---------- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(12, 18, 30, 0.45);
+  z-index: 3000;
+}
+
+.popup-box {
+  width: 420px;
+  max-width: 96%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(5, 10, 25, 0.25);
+  text-align: center;
+}
+
+.popup-btn {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  max-width: 180px;
+  margin: 10px auto 0;
+}
+
+/* SHOW DOTS */
+.rb-spinner .rb-dot {
+  background: #ffffff !important;
+}
+
+
+/* CENTER SPINNER */
+.rb-submit.loading .rb-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  gap: 6px;
+}
+
+/* HIDE TEXT WHEN LOADING */
+.rb-submit.loading {
+  color: transparent !important;
+}
+
+
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* TABLET / MID SIZE */
+@media (max-width: 1024px) {
+  .rb-new-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .rb-left-card {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .rb-left-img-wrap {
+    height: 260px;
+  }
+
+  .rb-right-card {
+    width: 100%;
+  }
+
+  .rb-form-inner {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+/* MOBILE LARGE */
+@media (max-width: 650px) {
+  .rb-left-img-wrap {
+    height: 220px;
+  }
+
+  .rb-new-title {
+    font-size: 28px;
+  }
+
+  .rb-outer-frame {
+    padding: 18px;
+  }
+}
+
+/* MOBILE SMALL */
+@media (max-width: 520px) {
+  .rb-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .rb-left-img-wrap {
+  width: 100%;
+  height: auto;           /* Let container grow naturally */
+  overflow: hidden;       /* Keep edges clean */
+}
+
+.rb-left-img {
+  width: 100%;
+  height: auto;           /* Maintain natural proportions */
+  object-fit: cover;      /* Still looks neat */
+  display: block;
+}
+
+  .rb-new-title {
+    font-size: 24px;
+  }
+
+  .rb-left-card {
+    border-radius: 6px;
+  }
+
+  .rb-outer-frame {
+    margin-top: 30px;
+  }
+}
+
+/* VERY SMALL SCREENS */
+@media (max-width: 380px) {
+  .rb-new-title {
+    font-size: 20px;
+  }
+
+  .rb-left-img-wrap {
+    height: 130px;
+  }
+
+  .rb-submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,206 @@
+/* ============================================
+   PAGE CONTAINER
+============================================ */
+.stock-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.stock-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fa0202;
+  margin-bottom: 18px;
+}
+
+/* ============================================
+   ADD STOCK BOX
+============================================ */
+.add-stock-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid #fa0202;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.add-stock-box h3 {
+  margin-bottom: 12px;
+  color: #fa0202;
+  font-size: 20px;
+}
+
+/* Responsive form layout */
+.add-stock-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stock-input {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 15px;
+  min-width: 180px;
+  flex: 1;
+}
+
+.add-stock-btn {
+  background: #fa0202;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-stock-btn:hover {
+  background: #c60000;
+}
+
+/* ============================================
+   STOCK LIST
+============================================ */
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stock-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  border-left: 6px solid #2196f3;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.stock-card:hover {
+  transform: scale(1.01);
+}
+
+.stock-row {
+  margin-bottom: 6px;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+/* ============================================
+   ACTION BUTTONS
+============================================ */
+.stock-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 10px 16px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.edit-btn {
+  background: #ff9800;
+}
+.edit-btn:hover {
+  background: #e68900;
+}
+
+.delete-btn {
+  background: #fa0202;
+}
+.delete-btn:hover {
+  background: #c60000;
+}
+
+/* ============================================
+   MESSAGES
+============================================ */
+.info-text {
+  color: #555;
+  margin-top: 10px;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+============================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .stock-title {
+    font-size: 24px;
+  }
+
+  .add-stock-box {
+    padding: 18px;
+  }
+
+  .stock-input {
+    flex: 1 1 45%;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .stock-container {
+    padding: 15px;
+  }
+
+  .stock-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .add-stock-box {
+    padding: 15px;
+  }
+
+  .add-stock-form {
+    flex-direction: column;
+  }
+
+  .stock-input {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .stock-card {
+    padding: 14px;
+  }
+
+  .stock-actions {
+    flex-direction: column;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

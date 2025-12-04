@@ -1,0 +1,442 @@
+:root{
+  --nav-text: #1a1a1a;
+  --nav-muted: #6b6b6b;
+  --accent: #ff3b3b;
+  --accent-2: #ff6b6b;
+  --glass: rgba(255,255,255,0.06);
+}
+
+/* ===== Transparent Navbar — No Height ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* ===== Navbar Inner — Center Items ===== */
+.navbar-inner {
+  position: relative;
+  width: min(1200px, 96%);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Logo on Left ===== */
+.logo {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: var(--nav-text);
+  text-decoration: none;
+  letter-spacing: 0.6px;
+  font-family: "TheSeasons", serif !important;
+  font-weight: 500;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Nav Items CENTERED ===== */
+.nav-links {
+  display: flex;
+  gap: 65px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Nav Item with Underline ONLY under Text ===== */
+.nav-item {
+  position: relative;
+  display: inline-block;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 6px 0;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* ===== Blood Bank Button — ON RIGHT SIDE ===== */
+.nav-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: #d40d0d;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(255, 59, 59, 0.12);
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== Hamburger (Only Mobile) ===== */
+.hamburger {
+  width: 36px;
+  height: 36px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--nav-text);
+  border-radius: 2px;
+}
+
+/* ===== Mobile Menu ===== */
+.mobile-menu {
+  display: none;
+  position: absolute !important;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(10,10,10,0.08);
+  padding: 14px;
+   z-index: 99999 !important;
+   pointer-events: auto !important;
+}
+
+.navbar-inner,
+.navbar {
+  pointer-events: auto !important;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-item,
+.mobile-btn {
+  display: block;
+  padding: 12px 10px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: var(--nav-text);
+}
+
+.mobile-btn {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Search icon */
+.search-container {
+  position: relative;
+  left: 50px;
+}
+
+.search-icon {
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #222;
+  transition: 0.2s ease;
+  height: 35px;
+  width: 35px;
+}
+
+.search-icon:hover {
+  color: #d7263d;
+  transform: scale(1.1);
+}
+
+.search-dropdown-box {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 300px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 18px rgba(0,0,0,0.15);
+  z-index: 999;
+  pointer-events: auto !important;   
+  z-index: 1 !important;
+}
+
+.search-dropdown-box input,
+.search-dropdown-box select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-dropdown-box button {
+  width: 100%;
+  padding: 10px;
+  background: #d7263d;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-wrapper {
+  width: 100%;
+  padding: 12px;
+}
+
+.search-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fa0202;
+  margin-bottom: 10px;
+}
+
+.search-input,
+.search-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-input:focus,
+.search-select:focus {
+  border-color: #fa0202;
+  box-shadow: 0 0 5px rgba(250, 2, 2, 0.3);
+}
+
+.search-btn {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background: #fa0202;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.search-btn:hover {
+  background: #d40d0d;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.results-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.result-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #eee;
+}
+
+.search-dropdown-box {
+  max-width: auto;
+  width: 600px;
+  height: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-results {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+
+
+@media (max-width: 1024px) {
+  .nav-links { gap: 40px; }
+  .logo { font-size: 32px; left: -10px; }
+  .nav-item { font-size: 17px; }
+}
+
+@media (max-width: 860px) {
+  .nav-links { gap: 28px; }
+  .nav-item { font-size: 16px; }
+  .nav-btn { padding: 7px 14px; font-size: 13px; }
+  .search-icon { margin-left: 10px; }
+}
+
+@media (max-width: 768px) {
+
+  .nav-links,
+  .nav-btn,
+  .search-container {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .logo {
+    left: 10px;
+    font-size: 30px;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .mobile-item { font-size: 17px; }
+}
+
+@media (min-width: 769px) {
+  .search-container {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-inner { height: 54px; }
+  .logo { font-size: 26px; left: 6px; }
+  .hamburger { width: 32px; height: 32px; right: 5px; }
+  .hamburger span { width: 16px; }
+  .mobile-item, .mobile-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .search-dropdown-box {
+    width: 260px !important;
+    right: -10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-inner { width: 98%; }
+  .logo { font-size: 24px; left: 4px; }
+  .hamburger { right: 2px; }
+  .mobile-item, .mobile-btn { font-size: 15px; }
+  .search-dropdown-box { width: 230px !important; }
+}
+
+
+.hamburger {
+  display: none !important;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 9999 !important;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important;
+    right: 10px;
+  }
+}
+
+/* Mobile Menu Working */
+.mobile-menu {
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 5px 28px rgba(0,0,0,0.12);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  display: block;
+  animation: dropdown 0.3s ease;
+}
+
+@keyframes dropdown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 769px) {
+  .search-container {
+    position: absolute;
+    right: 120px !important;  /* sits left of the blood bank button */
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto !important;     /* override old left: 50px; */
+    display: flex !important;
+    align-items: center;
+    z-index: 1500;
+  }
+
+  .search-icon {
+    margin-left: 0 !important;
+  }
+}
+
+/* ensure blood bank button stays at the edge */
+.nav-btn {
+  right: 0 !important;
+}

@@ -1,0 +1,114 @@
+/* matched.css - shared styles for MatchedDonors + WaitingForAcceptance */
+
+.md-wrap {
+  padding: 40px 6%;
+  min-height: calc(100vh - 88px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.md-inner {
+  width: 100%;
+  max-width: 980px;
+  background: rgba(255,255,255,0.98);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+}
+
+.md-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.md-loader {
+  padding: 12px;
+  text-align: center;
+  font-weight:700;
+}
+
+.md-error {
+  background: #ffecec;
+  color: #a10000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-weight:700;
+}
+
+.section-block { margin-bottom: 8px; }
+.section-head { font-weight:900; margin-bottom:8px; color:#222; }
+
+/* small card grid */
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.small-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+  position: relative;
+}
+
+.box-name { font-weight: 800; font-size: 15px; margin-bottom: 6px; }
+.box-distance { font-size: 13px; color: #666; }
+
+/* pending badge */
+.pending-badge {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(90deg,#ffb4a8,#ff6b5a);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight:700;
+  font-size: 12px;
+}
+
+/* confirm row - centered button */
+.confirm-row { display:flex; justify-content:center; margin-top: 18px; }
+.confirm-btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#ff3b30,#ff6b60);
+  color: #fff;
+  border: none;
+  font-weight:900;
+  cursor: pointer;
+}
+.back-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.back-btn.small { padding: 8px 12px; font-size: 14px; }
+
+/* accepted card */
+.accepted-wrap { margin-top: 10px; }
+.accepted-card {
+  border-radius: 10px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+.accepted-name { font-weight:900; font-size:20px; }
+.accepted-distance { color:#666; font-weight:700; margin-top:6px; }
+.accepted-extra { margin-top:10px; color:#333; }
+
+/* responsive */
+@media (max-width:720px){
+  .md-inner { padding:16px; }
+  .box-grid { grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
+}

@@ -1,0 +1,274 @@
+html {
+  scroll-behavior: auto !important;
+}
+
+body {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* MAIN PAGE */
+.md-page {
+  width: 95%;
+  margin: auto;
+  padding-top: 100px;
+  min-height: 200vh;
+}
+
+/* TITLE & SUBTITLE */
+.md-title {
+  color: #070707;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.md-subtitle {
+  color: black;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* TABLE SCROLL BOX */
+.md-table-box {
+  width: 80%;
+  margin: auto;
+
+  max-height: 260px;
+  height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  background: #ffffff;
+
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
+}
+
+/* Scrollbar */
+.md-table-box::-webkit-scrollbar {
+  width: 8px;
+}
+.md-table-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+/* TABLE */
+.md-table-b {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.md-table-b thead th {
+  background: #efefef;
+  padding: 12px;
+  border-bottom: 2px solid #d90429;
+  font-weight: 600;
+  text-align: left;
+  color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.md-table-b td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e2e2;
+  border-right: 1px solid #ececec;
+}
+.md-table-b td:last-child {
+  border-right: none;
+}
+
+.md-table-b tbody tr:hover {
+  background: #f7f7f7;
+}
+
+/* BUTTONS */
+.md-confirm-btn {
+  padding: 10px 20px;
+  background: #d90429;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto 0;
+}
+.md-confirm-btn:hover {
+  background: #b20322;
+}
+
+.md-back-btn {
+  padding: 8px 16px;
+  background: #d90429;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 15px;
+  transition: 0.2s ease-in-out;
+}
+.md-back-btn:hover {
+  background: #b20322;
+}
+
+/* LOADER */
+.md-loader-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+.md-loader-circle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ffd4d4;
+  border-top-color: #d90429;
+  border-radius: 50%;
+  animation: spinMD 0.8s linear infinite;
+}
+@keyframes spinMD {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.md-loader-text {
+  margin-top: 12px;
+  color: #d90429;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* BADGE STYLES */
+.highlight-col {
+  background: #fff6f6;
+  font-weight: 600;
+}
+.pill-b {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+.pill-b.accepted { background: #28a745; }
+.pill-b.pending { background: #f0ad4e; }
+.pill-b.rejected { background: #dc3545; }
+
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* Medium Screens */
+@media (max-width: 1100px) {
+  .md-page {
+    padding-top: 120px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .md-title,
+  .md-subtitle {
+    text-align: center;
+  }
+
+  .md-table-box {
+    width: 90%;
+  }
+}
+
+/* Small Tablets / Big Phones */
+@media (max-width: 768px) {
+  .md-title {
+    font-size: 24px;
+  }
+
+  .md-subtitle {
+    font-size: 20px;
+  }
+
+  .md-confirm-btn {
+    font-size: 15px;
+  }
+
+  .md-table-box {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .md-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .md-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .md-table-b thead th,
+  .md-table-b td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .pill-b {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .md-confirm-btn {
+    width: 90%;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .md-title {
+    font-size: 20px;
+  }
+
+  .md-subtitle {
+    font-size: 16px;
+  }
+
+  .md-table-b td {
+    font-size: 11px;
+  }
+
+  .md-back-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+/* Extra Small Phones (320px) */
+@media (max-width: 330px) {
+  .md-title {
+    font-size: 18px;
+  }
+
+  .md-subtitle {
+    font-size: 15px;
+  }
+
+  .md-confirm-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}

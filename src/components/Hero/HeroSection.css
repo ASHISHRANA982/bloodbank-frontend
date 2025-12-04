@@ -1,0 +1,207 @@
+/* ======================================
+   GLOBAL SCROLL FIX — ALWAYS ADD THIS
+====================================== */
+html, body, #root {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* ======================================
+   HERO SECTION CONTAINER
+====================================== */
+.hero {
+  width: 100%;
+  padding-top: 150px; /* space below navbar */
+  padding-bottom: 120px; /* extra padding so scroll shows */
+  background: #c3ebff;
+  min-height: 100vh; /* allow scrolling */
+}
+
+/* inner container */
+.hero-inner {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ======================================
+   LEFT SIDE (IMAGE)
+====================================== */
+.hero-left {
+  width: 50%;
+}
+
+.hero-img {
+  width: 100% !important;
+  max-width: 600px !important;
+  display: block;
+  object-fit: contain;
+}
+
+.hero-lottie {
+  width: 100%;
+  max-width: 550px;
+}
+
+.hero-lottie-text {
+  margin-top: 10px;
+  text-align: center;
+  color: #555;
+}
+
+.hero-lottie-text h3 {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* ======================================
+   RIGHT SIDE (TEXT)
+====================================== */
+.hero-right {
+  width: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+.eyebrow {
+  font-size: 64px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.1;
+}
+
+.hero-heading {
+  margin-top: 20px;
+  color: #585858;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.big {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* ======================================
+   CTA BUTTONS
+====================================== */
+.hero-cats-cta {
+  width: 100%;
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 20;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 50px;
+  margin-left: 50px;
+  position: relative;
+  z-index: 20;
+}
+
+.cta {
+  padding: 12px 26px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+}
+
+/* Make BUTTONS look exactly same as <Link class="cta"> */
+.cta,
+button.cta {
+  padding: 12px 26px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+  border: none;              /* remove default button border */
+  background: none;         /* allow color from .cta-red */
+}
+
+/* RED BUTTON (exact same look) */
+.cta-red,
+button.cta-red {
+  background: #ef233c;
+  color: #ffffff;
+  /* margin-top: 30px; */
+}
+
+
+/* orange button */
+.cta-orange {
+  background: #ffb703;
+  color: #fff;
+}
+
+.cta-orange:hover {
+  background: #f89f00;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 48px;
+  }
+
+  .hero-heading {
+    margin: auto;
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-cats-cta {
+    justify-content: center;
+  }
+
+  .hero-ctas {
+    margin-left: 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .eyebrow {
+    font-size: 40px;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}

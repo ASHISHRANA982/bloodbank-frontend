@@ -1,0 +1,159 @@
+/* ---------- Wrapper ---------- */
+.login-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #f2f6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Prevents edges cut on mobiles */
+  box-sizing: border-box;
+}
+
+/* ---------- Login Box ---------- */
+.login-box {
+  width: 380px;
+  max-width: 100%;
+  background: white;
+  padding: 30px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+/* ---------- Titles ---------- */
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+
+/* ---------- Inputs ---------- */
+.login-input {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.login-input:focus {
+  border-color: #e53935;
+  outline: none;
+}
+
+/* ---------- Button ---------- */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #c62828;
+}
+
+/* ---------- Error ---------- */
+.login-error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ---------- Bottom Text ---------- */
+.login-bottom-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-bottom-text a {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.signup-link {
+  color: #e96b69;
+}
+
+.forgot-link {
+  color: #1a73e8;
+}
+
+/* ---------- Password Row ---------- */
+.password-row {
+  display: flex;
+  justify-content: flex-end;   /* FIXED alignment */
+  width: 100%;
+}
+
+.password-row a {
+  font-size: 14px;
+}
+
+/* ---------- Button Loader ---------- */
+.btn-loader {
+  display: flex;
+  justify-content: center; /* Center loader */
+  align-items: center;
+  width: 100%;
+}
+
+/* Loader circle */
+.loader-circle {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin-btn 0.7s linear infinite;
+  margin: 0 auto; /* Center loader FIX */
+}
+
+/* Rotate animation */
+@keyframes spin-btn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 24px;
+  }
+
+  .login-input {
+    font-size: 14px;
+  }
+
+  .password-row a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-input {
+    font-size: 13px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}

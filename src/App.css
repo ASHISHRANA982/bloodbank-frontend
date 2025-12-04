@@ -1,0 +1,10 @@
+/* Optional global layout tweaks */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ensure the top navbar doesn't overlap content on small screens */
+.content-offset {
+  padding-top: 90px; /* same as navbar height (adjust if changed) */
+}

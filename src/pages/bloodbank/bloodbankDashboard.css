@@ -1,0 +1,292 @@
+/* ==========================
+   SIDEBAR TOGGLE BUTTON
+   (LEFT CENTER)
+============================= */
+
+/* ======================================
+   FINAL SIDEBAR TOGGLE BUTTON (USE THIS)
+====================================== */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: black;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1500;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+.sidebar-toggle-btn:hover {
+  background: #d40d0d;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ==========================
+   SIDEBAR
+============================= */
+
+.dashboard-sidebar {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 230px;
+  height: 80%;
+  background: #ffffff;
+  padding: 20px 15px;
+  border-right: 1px solid #e0e0e0;
+  transform: translateX(-250px);
+  transition: all 0.35s ease;
+  box-shadow: 0px 2px 12px rgba(0,0,0,0.08);
+  z-index: 1000;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+
+.dashboard-sidebar.open {
+  transform: translateX(0);
+}
+
+
+/* Sidebar links */
+.sidebar-link {
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-left: 30px;
+}
+
+.sidebar-link:hover {
+  background: #fa0202;
+  transform: translateX(5px);
+}
+
+/* ==========================
+   CONTENT SHIFT
+============================= */
+.dashboard-content {
+  margin-left: 260px;
+  margin-top: 90px;
+  padding: 30px;
+  transition: margin-left 0.4s ease;
+}
+
+.dashboard-sidebar:not(.open) + .dashboard-content {
+  margin-left: 40px;
+}
+
+
+/* .dashboard-sidebar.open ~ .dashboard-content {
+  margin-left: 260px;
+} */
+
+
+   /* CARDS */
+
+.bb-section-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bb-section-card h2 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  color: #fa0202;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fa0202;
+  margin-left: 40px;
+}
+
+
+   /* SIDEBAR LINKS */
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* Icon style */
+.sidebar-link .icon {
+  font-size: 20px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover effect */
+.sidebar-link:hover {
+  background: #f3abab;
+}
+
+/* Active section style */
+.sidebar-link.active {
+  background: #080808;
+  color: white;
+}
+
+.sidebar-link.active .icon {
+  color: rgb(231, 131, 131);
+}
+
+
+   /* LOGOUT SECTION */
+/* ==========================
+   FIXED LOGOUT BUTTON
+   (NO EXTRA RED BOX)
+========================== */
+
+.sidebar-logout {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  /* Ensures the extra red box disappears */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-left: 30px !important;
+}
+
+.sidebar-logout button {
+  width: 100px;
+  background: #fa0202;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sidebar-logout button:hover {
+  background: #d40a0a;
+}
+
+/* ============================================
+   TABLET RESPONSIVE  (max-width: 1024px)
+============================================ */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+  .dashboard-sidebar {
+    width: 200px;
+  }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE  (max-width: 768px)
+============================================ */
+@media (max-width: 768px) {
+
+  /* Sidebar becomes overlay on mobile */
+  .dashboard-sidebar {
+    width: 70%;
+    max-width: 260px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    border-radius: 0;
+    padding-top: 80px;
+    transform: translateX(-100%);
+  }
+
+  .dashboard-sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Content full width on mobile */
+  .dashboard-content {
+    margin-left: 0 !important;
+    margin-top: 120px;
+    padding: 15px;
+  }
+
+  /* Toggle button reposition */
+  .sidebar-toggle-btn {
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* ============================================
+   SMALL MOBILE RESPONSIVE  (max-width: 480px)
+============================================ */
+@media (max-width: 480px) {
+
+  .dashboard-sidebar {
+    width: 80%;
+  }
+
+  .sidebar-link {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .sidebar-link .icon {
+    font-size: 18px;
+  }
+
+  /* Cards */
+  .bb-section-card {
+    padding: 15px;
+  }
+
+  /* Headings */
+  .dashboard-content h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,162 @@
+/* ===========================================
+   FORGET PASSWORD PAGE LAYOUT
+=========================================== */
+.forget-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d7eeff;
+  padding: 20px; /* Important for mobile */
+}
+
+.forget-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 30px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* TITLE */
+.forget-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 20px;
+}
+
+/* ===========================================
+   MESSAGES
+=========================================== */
+.success-msg {
+  color: green;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.error-msg {
+  color: red;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===========================================
+   INPUT FIELDS
+=========================================== */
+.forget-form {
+  margin-top: 15px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #b71c1c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(183, 28, 28, 0.3);
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #8a1313;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: #333;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .forget-box {
+    padding: 30px 25px;
+  }
+
+  .forget-title {
+    font-size: 24px;
+  }
+
+  .submit-btn,
+  .reset-btn {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .forget-box {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+
+  .forget-title {
+    font-size: 22px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .reset-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

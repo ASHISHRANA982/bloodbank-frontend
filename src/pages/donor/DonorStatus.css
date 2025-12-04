@@ -1,0 +1,339 @@
+/* ------------------ MAIN WRAPPER ------------------ */
+.cs-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ------------------ RIGHT PANEL ------------------ */
+.cs-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  /* FIX BROKEN LAYOUT */
+  margin-left: -15rem;            
+  margin-top: 0;             
+
+  width: 100%;
+  max-width: 100%;           /* responsive */
+  height: auto;              /* responsive */
+  box-sizing: border-box;
+}
+
+/* ------------------ TABS ------------------ */
+.cs-tabs {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap; /* 👉 tabs wrap on small screens */
+}
+
+.cs-tab {
+  background: none;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #555;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+
+.cs-tab:hover { color: #e53935; }
+
+.cs-tab.active {
+  color: #e53935;
+  font-weight: 600;
+  border-bottom: 2px solid #e53935;
+}
+
+/* EMPTY TEXT */
+.cs-empty {
+  font-size: 15px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ------------------ TABLE ------------------ */
+.cs-table-container {
+  width: 100%;
+  overflow-x: auto;      /* horizontal scroll for mobile */
+}
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: white;
+  min-width: 600px;      /* ensure table scrolls instead of shrinking */
+}
+
+.cs-table thead {
+  background: #fafafa;
+}
+
+.cs-table th {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.cs-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eeeeee;
+  color: #555;
+}
+
+.cs-table tr:hover {
+  background: #f9f9f9;
+}
+
+/* ------------------ STATUS PILL ------------------ */
+.cs-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cs-status.pending {
+  background: #fb8c00;
+}
+
+.cs-status.accepted {
+  background: #43a047;
+}
+
+/* ------------------ ACTION BUTTONS ------------------ */
+.cs-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* FIX overflow */
+}
+
+.cs-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  border: none;
+  transition: 0.2s;
+  font-weight: 500;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.cs-btn.cancel {
+  background: transparent;
+  border: 1px solid #e53935;
+  color: #e53935;
+}
+
+.cs-btn.cancel:hover {
+  background: #ffe5e5;
+}
+
+.cs-btn.accept {
+  background: #7bb156;
+  color: #fff;
+}
+
+.cs-btn.accept:hover {
+  opacity: 0.85;
+}
+
+/* ------------------ LOADER ------------------ */
+.cs-page-loader {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid #e0e0e0;
+  border-top-color: #e53935;
+  border-radius: 50%;
+  animation: cs-spin 0.8s linear infinite;
+}
+
+@keyframes cs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+/* ---------------------------------------
+   EXTRA RESPONSIVE FIXES FOR ALL SCREENS
+---------------------------------------- */
+
+/* Fix huge left margin on desktops */
+@media (min-width: 1200px) {
+  .cs-right {
+    margin-left: -5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cs-right {
+    margin-left: -5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .cs-right {
+    margin-left: 0 !important;
+  }
+}
+
+/* Improve layout on tablets */
+@media (max-width: 768px) {
+  .cs-wrapper {
+    padding: 10px;
+  }
+
+  .cs-right {
+    padding: 16px;
+    box-shadow: none;
+  }
+
+  .cs-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .cs-tabs {
+    gap: 6px;
+  }
+
+  .cs-tab {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .cs-table-container {
+    overflow-x: auto;
+  }
+
+  .cs-table {
+    min-width: 480px;
+    font-size: 13px;
+  }
+
+  .cs-table th, .cs-table td {
+    padding: 10px;
+  }
+
+  .cs-actions {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .cs-btn {
+    width: 100%; /* Full width on small devices */
+    text-align: center;
+  }
+}
+
+/* Ultra small phones (<= 360px) */
+@media (max-width: 360px) {
+  .cs-tab {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .cs-table {
+    min-width: 450px;
+  }
+
+  .cs-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* =============================
+   FIX RESPONSIVE LAYOUT
+============================= */
+
+/* Tablets & Medium Screens */
+@media (max-width: 1100px) {
+  .donor-dashboard {
+    flex-direction: column; /* stack sidebar & content */
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 90%;
+    margin-left: 0;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .cs-right {
+    margin-left: 0 !important;
+    width: 95% !important;
+    margin-top: 20px;
+  }
+}
+
+/* Tablets & Large Phones */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cs-right {
+    width: 100%;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sidebar-title {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  .info-item {
+    gap: 10px;
+  }
+
+  .cs-right {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .cs-table-container {
+    overflow-x: auto;
+  }
+}
