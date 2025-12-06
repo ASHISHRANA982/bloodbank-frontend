@@ -345,15 +345,20 @@ export default function RequestBlood() {
 
                   {/* SUBMIT */}
                   <div className="rb-submit-row">
-                    <button className="rb-submit rb-submit-medium" type="submit" disabled={loading}>
-                      {loading ? (
-                        <span className="rb-spinner">
-                          <span className="rb-dot" /> <span className="rb-dot" /> <span className="rb-dot" />
-                        </span>
-                      ) : (
-                        "Submit Request"
-                      )}
-                    </button>
+                    <button
+  className={`rb-submit rb-submit-medium ${loading ? "loading" : ""}`}
+  type="submit"
+  disabled={loading}
+>
+  {loading ? (
+    <span className="rb-spinner">
+      <span className="rb-dot" /><span className="rb-dot" /><span className="rb-dot" />
+    </span>
+  ) : (
+    "Submit Request"
+  )}
+</button>
+
                   </div>
                 </form>
               </div>

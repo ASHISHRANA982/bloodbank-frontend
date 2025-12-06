@@ -36,7 +36,7 @@ const DonorLogin = () => {
       <input
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="Email address"
+        placeholder="Enter username"
         className="login-input"
       />
 
