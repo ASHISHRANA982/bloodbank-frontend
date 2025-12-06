@@ -79,7 +79,7 @@ export default function HeroSection() {
           {/* IMAGE */}
           <div className="hero-lottie">
             <img
-              src="/src/assets/hero-image.png"
+              src="E:\ashis\FrontendToday\newFrontend\src\assets\hero-image.png"
               alt="Blood Donation"
               className="hero-img"
             />
