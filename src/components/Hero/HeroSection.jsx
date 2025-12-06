@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import "./HeroSection.css";
 import Footer from "./Footer";
+import heroImage from "../../assets/hero-image.png"
 
 
 
@@ -79,7 +80,7 @@ export default function HeroSection() {
           {/* IMAGE */}
           <div className="hero-lottie">
             <img
-              src="E:\ashis\FrontendToday\newFrontend\src\assets\hero-image.png"
+              src={heroImage}
               alt="Blood Donation"
               className="hero-img"
             />
